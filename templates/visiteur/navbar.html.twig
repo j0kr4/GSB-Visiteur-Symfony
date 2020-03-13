@@ -1,0 +1,102 @@
+{% extends "base.html.twig" %}
+
+{% block menu %}
+    <style>
+        body{
+            background: #666;
+            color: #fff;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        
+    </style>
+    
+    <div style="margin-top: 15px">    
+        <center>
+            <style>
+                .imgnav {
+                    border-radius: 25%;
+                }             
+                
+                .imgnav:hover {
+                        -webkit-transform: scaleX(-1);
+                         transform: scaleX(-1);
+                        }               
+            </style>
+        </center>
+    </div>
+    <br/>
+    
+{% endblock %}
+{% block nav %}
+
+<nav class="navbar navbar-expand-lg navbar-dark">
+                <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarSupportedContent" data-toggle="collapse" type="button">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item {% if app.request.get('_route') == 'CompteVisiteur' %}active{% endif %}">
+                            <a class="nav-link" href="{{ path('CompteVisiteur') }} ">ACCUEIL
+                                {% if app.request.get('_route') == 'CompteVisiteur' %}
+                                    <span class="sr-only">(current)</span>
+                                {% endif %}
+                            </a>
+                        </li>
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Dropdown button
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </div>
+
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown">
+                                Dropdown button
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </div>
+
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown">
+                                Dropdown button
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </div>
+
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown">
+                                Dropdown button
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </div>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Déconnexion</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+
+
+    
+
+{% endblock %}
