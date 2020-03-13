@@ -1,1 +1,1 @@
-# GSB-Visiteur-Android
+# GSB-Visiteur-Symfony
